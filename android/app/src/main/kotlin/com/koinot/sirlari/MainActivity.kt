@@ -1,4 +1,4 @@
-package com.example.koinotsirlari
+package com.koinot.sirlari
 
 import io.flutter.embedding.android.FlutterActivity
 
