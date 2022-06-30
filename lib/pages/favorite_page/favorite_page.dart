@@ -3,6 +3,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:koinotsirlari/core/constants/color_const.dart';
+import 'package:koinotsirlari/core/constants/fontFamily_const.dart';
 import 'package:koinotsirlari/pages/detail_page/detail_page.dart';
 import 'package:koinotsirlari/models/object_models.dart';
 import 'package:koinotsirlari/views/background_image.dart';
@@ -29,10 +31,10 @@ class _FavoritePageState extends State<FavoritePage> {
     return Scaffold(
      // backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0xFF253341),
+        backgroundColor: ColorConst.asosiyRang,
         elevation: 0,
         centerTitle: true,
-        title: const Text("Barchasi",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 23,fontFamily: 'Poppins'),),
+        title:  Text("Barchasi",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 23,fontFamily: FontFamilyConst.poppins),),
       ),
       body: Stack(
         children: [
@@ -65,7 +67,7 @@ class _FavoritePageState extends State<FavoritePage> {
                               );
                             },
                             child: Card(
-                              color: Color(0xFF253341),
+                              color: ColorConst.asosiyRang,
                               elevation: 3,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10)
@@ -83,7 +85,7 @@ class _FavoritePageState extends State<FavoritePage> {
                                     alignment: Alignment.centerLeft,
                                     padding: const EdgeInsets.only(left: 10,bottom: 6),
                                     height: 50,
-                                    child: Text(favorite[index]["name"].toString(),style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 15,fontFamily: 'Poppins'),),
+                                    child: Text(favorite[index]["name"].toString(),style:  TextStyle(fontWeight: FontWeight.bold,fontSize: 15,fontFamily: FontFamilyConst.poppins),),
                                   )
                                 ],
                               ),

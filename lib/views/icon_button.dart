@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 IconButton buildIconButton() {
-  return IconButton(onPressed: (){
+  return IconButton(
+      onPressed: (){
     Get.defaultDialog(
       cancel: Align(
         alignment: Alignment(0,-1.6),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:koinotsirlari/core/constants/color_const.dart';
 import 'package:koinotsirlari/pages/control_page/control_page_controller.dart';
 import 'package:koinotsirlari/pages/favorite_page/favorite_page.dart';
 import 'package:koinotsirlari/pages/home_page/home_page.dart';
@@ -47,7 +48,7 @@ class ControlPage extends StatelessWidget {
                         //color: Colors.white
                       ),
                       child: Card(
-                        color: Color(0xFF253341),
+                        color: ColorConst.asosiyRang2,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(40)),
                         elevation: 10,
@@ -64,8 +65,9 @@ class ControlPage extends StatelessWidget {
                                 },
                                 icon: Icon(Icons.dark_mode,size: 30,
                                     color: controller.selectedIndex == 0
-                                        ? Colors.yellowAccent
-                                        : Colors.white),
+                                        ? ColorConst.yellow
+                                        : ColorConst.white
+                                ),
                               ),
                             ),
                             Expanded(
@@ -79,8 +81,8 @@ class ControlPage extends StatelessWidget {
                                 icon: Icon(
                                   Icons.favorite,size: 30,
                                   color: controller.selectedIndex == 1
-                                      ? Colors.yellowAccent
-                                      : Colors.white,
+                                      ? ColorConst.yellow
+                                      : ColorConst.white,
                                 ),
                               ),
                             ),
@@ -94,8 +96,9 @@ class ControlPage extends StatelessWidget {
                                 },
                                 icon: Icon(Icons.bookmark,size: 30,
                                     color: controller.selectedIndex == 2
-                                        ? Colors.yellowAccent
-                                        : Colors.white),
+                                        ? ColorConst.yellow
+                                        : ColorConst.white
+                                ),
                               ),
                             ),
                           ],

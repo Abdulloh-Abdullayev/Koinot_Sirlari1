@@ -1,5 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:koinotsirlari/core/constants/color_const.dart';
+import 'package:koinotsirlari/core/constants/fontFamily_const.dart';
 import 'package:koinotsirlari/models/control_model.dart';
 import 'package:koinotsirlari/views/background_image.dart';
 import 'package:koinotsirlari/views/icon_button.dart';
@@ -13,9 +15,9 @@ class SettingPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Color(0xFF253341),
+        backgroundColor: ColorConst.asosiyRang,
         elevation: 0,
-        title: const Text("Tafakkur", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 23, fontFamily: 'Poppins'),),
+        title:  Text("Tafakkur", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 23, fontFamily: FontFamilyConst.poppins),),
         actions: [
           buildIconButton(),
           SizedBox(width: 5,)
@@ -34,13 +36,13 @@ class SettingPage extends StatelessWidget {
                   return Padding(
                     padding: EdgeInsets.symmetric(vertical: 1),
                     child: Card(
-                        color: Color(0xFF253341),
+                        color: ColorConst.asosiyRang,
                         elevation: 5,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15)
                         ),
                         child: ExpansionTile(
-                          collapsedTextColor: Colors.black,
+                          collapsedTextColor: ColorConst.black,
                           title: Row(
                             children: [
                               Expanded(
@@ -60,9 +62,9 @@ class SettingPage extends StatelessWidget {
                                       padding: const EdgeInsets.all(8.0),
                                       child:  Text(
                                         tafakkur[index].title, style: TextStyle(
-                                          color: Colors.white,
+                                          color: ColorConst.white,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 16, fontFamily: 'Poppins'),),
+                                          fontSize: 16, fontFamily: FontFamilyConst.poppins),),
                                     ),
                                   ],
                                 ),
@@ -76,16 +78,16 @@ class SettingPage extends StatelessWidget {
                                 children:  [
                                   Padding(
                                     padding: EdgeInsets.only(bottom: 8),
-                                    child: Text(tafakkur[index].title.toString(),style: TextStyle(fontSize: 22,fontFamily: 'Poppins'),),
+                                    child: Text(tafakkur[index].title.toString(),style: TextStyle(fontSize: 20,fontFamily: FontFamilyConst.poppins),),
                                   ),
 
-                                  Text(tafakkur[index].subtitle.toString(),style: TextStyle(fontSize: 18,fontFamily: 'Poppins')),
+                                  Text(tafakkur[index].subtitle.toString(),style: TextStyle(fontSize: 18,fontFamily: FontFamilyConst.poppins,color: Colors.grey.shade300)),
 
                                   SizedBox(height: 10,),
 
                                   Align(
                                     alignment: Alignment.centerRight,
-                                   child: Text("www.islom.uz",style: TextStyle(fontSize: 16,fontFamily: 'Poppins')),
+                                   child: Text("www.islom.uz",style: TextStyle(fontSize: 16,fontFamily: FontFamilyConst.poppins)),
                                   )
                                 ],
                               ),

@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:koinotsirlari/core/constants/color_const.dart';
+import 'package:koinotsirlari/core/constants/fontFamily_const.dart';
 import 'package:koinotsirlari/pages/control_page/control_page.dart';
 import 'package:koinotsirlari/views/background_image.dart';
 
@@ -49,12 +51,12 @@ class _SplashPageState extends State<SplashPage> {
                         Container(
                           alignment: Alignment.centerLeft,
                           padding: const EdgeInsets.all(8.0),
-                          child: const Text("Tadqiqotlar",style: TextStyle(color: Colors.white,letterSpacing: 1, fontWeight: FontWeight.bold, fontSize: 30,fontFamily: "Poppins"),),
+                          child:  Text("Tadqiqotlar",style: TextStyle(color: ColorConst.white,letterSpacing: 1, fontWeight: FontWeight.bold, fontSize: 30,fontFamily: FontFamilyConst.poppins),),
                         ),
                         Container(
                           alignment: Alignment.centerLeft,
                           padding: const EdgeInsets.all(8.0),
-                          child: const Text("Nasa Hubble Space telescopi tomonidan amalga oshirilgan tadqiqotlar",style: TextStyle(color: Colors.white54, fontSize: 20,fontFamily: "Poppins"),),
+                          child: Text("Nasa Hubble Space telescopi tomonidan amalga oshirilgan tadqiqotlar",style: TextStyle(color: Colors.white54, fontSize: 20,fontFamily: FontFamilyConst.poppins),),
                         )
                       ],
                     ),

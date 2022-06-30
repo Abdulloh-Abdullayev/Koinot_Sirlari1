@@ -6,6 +6,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
+import 'package:koinotsirlari/core/constants/color_const.dart';
+import 'package:koinotsirlari/core/constants/fontFamily_const.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class DetailPage extends StatefulWidget {
@@ -37,7 +39,7 @@ class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF253341),
+      backgroundColor: ColorConst.asosiyRang,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -68,7 +70,7 @@ class _DetailPageState extends State<DetailPage> {
                       );
 
                     },
-                    child: Text("Suratni yuklash",style: TextStyle(fontSize: 20,color: Colors.yellow,fontFamily: 'Poppins'),),
+                    child: Text("Suratni yuklash",style: TextStyle(fontSize: 20,color: ColorConst.yellow,fontFamily: FontFamilyConst.poppins),),
                   ),
                 ),
               ),
@@ -78,24 +80,24 @@ class _DetailPageState extends State<DetailPage> {
               child: Container(
                 alignment: Alignment.centerLeft,
                 padding: const EdgeInsets.only(bottom: 20,left: 20,right: 20),
-                child: Text(widget.link!['name'].toString(), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 30,fontFamily: 'Poppins'),),
+                child: Text(widget.link!['name'].toString(), style:  TextStyle( fontSize: 25,fontFamily: FontFamilyConst.poppins),),
               ),
             ),
             const Divider(color: Colors.transparent, height: 2,),
             BounceInDown(child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Text(widget.link!['description'].toString(),textAlign: TextAlign.start, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20,),),
+              child: Text(widget.link!['description'].toString(),textAlign: TextAlign.start, style: TextStyle( fontSize: 18,fontFamily: FontFamilyConst.poppins,color: Colors.grey.shade300),),
             ),),
             const SizedBox(height: 20,)
           ],
         )
       ),
       floatingActionButton: FloatingActionButton(
-      backgroundColor: Colors.white,
+      backgroundColor: ColorConst.white,
       onPressed: (){
         Navigator.pop(context);
       },
-      child: const Icon(Icons.arrow_back,color: Colors.black,),
+      child:  Icon(Icons.arrow_back,color: ColorConst.black,),
     ),
     );
   }
